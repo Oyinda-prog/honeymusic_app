@@ -2,9 +2,6 @@
 
 import Signup from "@/components/Signup";
 import Signupone from "@/components/Signupone";
-import Signuptwo from "@/components/Signuptwo";
-import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
 
 // import login from '/about.tsx'

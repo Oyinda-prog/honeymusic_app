@@ -2,9 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Signuptwo from "./Signuptwo";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import signupcomponent from "@/app/signup/page";
+// import { useRouter } from "next/navigation";
 import Signup from "./Signup";
 
 // import login from '/about.tsx'
@@ -16,9 +14,9 @@ interface user {
   dob: string;
   gender: string;
 }
-
+ 
 const Signone = () => {
-    const router=useRouter()
+    // const router=useRouter()
     const [secondcomponent, setsecondcomponent] = useState(false);
     const [previouscond, setpreviouscond] = useState(false)
     const [Signupone, setsignupone] = useState<user>({
