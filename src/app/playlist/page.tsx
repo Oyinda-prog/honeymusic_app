@@ -1,6 +1,4 @@
 'use client'
-import Artistecomponent from '@/components/Artistecomponent'
-import Navbar from '@/components/Navbar'
 import Sidecomponent from '@/components/Sidecomponent'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,7 +15,7 @@ interface apiinterface{
     releaseDate:string
     }
 
-const page = () => {
+const Page = () => {
   let router=useRouter()
   const [currentuser, setcurrentuser] = useState(()=>{
     return JSON.parse(localStorage.getItem('honeymusic_currentuser')!)
@@ -136,4 +134,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

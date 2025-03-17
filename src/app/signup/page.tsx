@@ -17,7 +17,7 @@ interface User{
   gender:string
 }
 
-const page = () => {
+const Page = () => {
     const [nextcomponent, setnextcomponent] = useState(false)
     const [user, setuser] = useState<User>({
 email:"",
@@ -34,19 +34,19 @@ gender:""
         return <Signupone/>
     }
    
- const handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
-const {name,value}=e.target
-setuser((prevData)=>({
-  ...prevData,
-  [name]:value
-}))
-   }
-   const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
-    e.preventDefault()
-    console.log('form submitted',user);
-    localStorage.setItem('honeymusic_users',JSON.stringify(user))
-    nextpage()
-   }
+//  const handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
+// const {name,value}=e.target
+// setuser((prevData)=>({
+//   ...prevData,
+//   [name]:value
+// }))
+//    }
+//    const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
+//     e.preventDefault()
+//     console.log('form submitted',user);
+//     localStorage.setItem('honeymusic_users',JSON.stringify(user))
+//     nextpage()
+//    }
   return (
     <>
     <Signup/>
@@ -127,4 +127,4 @@ setuser((prevData)=>({
   );
 };
 
-export default page;
+export default Page;

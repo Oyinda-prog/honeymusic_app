@@ -14,7 +14,7 @@ interface apiinterface {
   releaseDate: string;
 }
 
-const page = () => {
+const Page = () => {
   let router = useRouter();
   const [currentuser, setcurrentuser] = useState(() => {
     return JSON.parse(localStorage.getItem("honeymusic_currentuser")!);
@@ -207,4 +207,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

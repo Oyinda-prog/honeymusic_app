@@ -1,8 +1,8 @@
 'use client'
-import Link from 'next/link'
+
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <>
     <div className=" p-6 bg-red-400">
@@ -16,4 +16,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

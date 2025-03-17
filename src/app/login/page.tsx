@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 
 interface User{
   email:string,
@@ -12,7 +12,7 @@ interface User{
   dob:string,
   gender:string
 }
-const page = () => {
+const Page = () => {
   const [msg, setmsg] = useState('')
   let router=useRouter()
   const [allusers, setallusers] = useState(()=>{
@@ -122,4 +122,4 @@ setuser((prevData)=>({
 };
 <button type="submit" className="hover: p-3 font-bold rounded-3xl bg-green-500 bg w-[100%] mt-5" >Next</button>
 
-export default page;
+export default Page;
