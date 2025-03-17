@@ -17,7 +17,7 @@ interface User{
   gender:string
 }
 
-const Page = () => {
+const page = () => {
     const [nextcomponent, setnextcomponent] = useState(false)
     const [user, setuser] = useState<User>({
 email:"",
@@ -127,4 +127,4 @@ gender:""
   );
 };
 
-export default Page;
+export default page;

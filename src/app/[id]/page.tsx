@@ -36,7 +36,7 @@ const Page = () => {
 
         const param=useParams()
         const{id}=param
-        let artiste=api.find((artist)=>String(artist.id)===id)
+        const artiste=api.find((artist)=>String(artist.id)===id)
         console.log(artiste);
         
 
