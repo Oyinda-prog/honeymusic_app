@@ -15,19 +15,44 @@ interface apiinterface{
     releaseDate:string
     }
 
+    interface User{
+      email:string,
+      password:string,
+      id:string,
+      fullname:string,
+      dob:string,
+      gender:string
+    }
 const page = () => {
   let router=useRouter()
-  const [currentuser, setcurrentuser] = useState(()=>{
-    return JSON.parse(localStorage.getItem('honeymusic_currentuser')!)
-  })
-  let a={
+  const [currentuser, setcurrentuser] = useState<User|null>(null )
+  const a={
     textDecoration:'none',
     color:'white'
   }
-  let col={
+  const col={
     color:'black',
     textDecoration:'none'
   }
+  // useEffect(() => {
+  //     if (typeof window !== "undefined") {
+  //       const storedUsers = localStorage.getItem("honeymusic_allusers");
+  //       setcurrentuser(JSON.parse(storedUsers));
+  //     }
+  //   }, []);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedUsers = localStorage.getItem("honeymusic_allusers");
+      if (storedUsers) {
+      
+          setcurrentuser(JSON.parse(storedUsers));
+        
+      } else {
+        setcurrentuser(null); 
+      }
+    }
+  }, []);
+  
 
         const [api, setapi] = useState<apiinterface[]>([])
     
@@ -66,7 +91,21 @@ const page = () => {
         <li><Link href="/" style={a}>Home</Link></li>
         <li className='shadow'><input type="text" className=' text-center bg-[#2A2A2A] rounded-3xl border border-amber-950 sm:none lg:w-[700px] lg:h-[50px]' placeholder='What do you want to play?' /></li>
         <li><Link href="#" style={a}>Install App</Link></li>
-        <li className='bg-pink-900 flex justify-center items-center text-white text-center font-bold rounded-full w-[50px] h-[50px]'><Link href="/login">{currentuser.fullname.slice(0,1).toUpperCase()}</Link></li>
+        {/* <li className='bg-pink-900 flex justify-center items-center text-white text-center font-bold rounded-full w-[50px] h-[50px]'>
+          <Link href="/login">{currentuser.fullname.slice(0,1).toUpperCase()}</Link> */}
+          {/* </li> */}
+          {/* <li className='bg-pink-900 flex justify-center items-center text-white text-center font-bold rounded-full w-[50px] h-[50px]'>
+  <Link href="/login">
+    {currentuser ? currentuser.fullname.slice(0, 1).toUpperCase() : "?"}
+  </Link>
+</li> */}
+<li className='bg-pink-900 flex justify-center items-center text-white text-center font-bold rounded-full w-[50px] h-[50px]'>
+  <Link href="/login">
+    {currentuser?.fullname ? currentuser.fullname.slice(0, 1).toUpperCase() : "?"}
+  </Link>
+</li>
+
+
         <li ><Link href="/" style={a} onClick={logOut}>Log Out</Link></li>
         <li className='bg-white text-[15px] text-black p-3 rounded-3xl'><Link href="#" style={col}>Explore Premium</Link></li>
     </ul>

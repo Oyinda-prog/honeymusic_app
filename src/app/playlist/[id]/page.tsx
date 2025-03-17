@@ -13,20 +13,39 @@ interface apiinterface {
   albumName: string;
   releaseDate: string;
 }
-
+interface User{
+  email:string,
+  password:string,
+  id:string,
+  fullname:string,
+  dob:string,
+  gender:string
+}
 const page = () => {
-  let router = useRouter();
-  const [currentuser, setcurrentuser] = useState(() => {
-    return JSON.parse(localStorage.getItem("honeymusic_currentuser")!);
+  const router = useRouter();
+  const [currentuser, setcurrentuser] = useState<User>({
+    email:'',
+    password:"",
+    id:'',
+    fullname:"",
+    dob:'',
+    gender:""
   });
   let a = {
     textDecoration: "none",
     color: "white",
   };
-  let col = {
+
+  const col = {
     color: "black",
     textDecoration: "none",
   };
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedUsers = localStorage.getItem("honeymusic_allusers");
+      setcurrentuser(storedUsers ? JSON.parse(storedUsers) : []);
+    }
+  }, []);
   const logOut = () => {
     localStorage.removeItem("honeymusic_currentuser");
     router.push("/");
@@ -98,11 +117,17 @@ const page = () => {
               Install App
             </Link>
           </li>
-          <li className="bg-pink-900 flex justify-center items-center text-white text-center font-bold rounded-full w-[50px] h-[50px]">
+          {/* <li className="bg-pink-900 flex justify-center items-center text-white text-center font-bold rounded-full w-[50px] h-[50px]">
             <Link href="/login">
               {currentuser.fullname.slice(0, 1).toUpperCase()}
             </Link>
-          </li>
+          </li> */}
+          <li className='bg-pink-900 flex justify-center items-center text-white text-center font-bold rounded-full w-[50px] h-[50px]'>
+  <Link href="/login">
+    {currentuser?.fullname ? currentuser.fullname.slice(0, 1).toUpperCase() : "?"}
+  </Link>
+</li>
+
           <li>
             <Link href="/" style={a} onClick={logOut}>
               Log Out
