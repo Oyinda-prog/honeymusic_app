@@ -31,7 +31,7 @@ const page = () => {
     dob:'',
     gender:""
   });
-  let a = {
+  const a = {
     textDecoration: "none",
     color: "white",
   };

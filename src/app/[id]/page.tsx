@@ -14,7 +14,7 @@ interface apiinterface{
     releaseDate:string
     }
 
-const Page = () => {
+const page = () => {
     
     // useEffect(() => {
     //  console.log(id);
@@ -74,4 +74,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default page

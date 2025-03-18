@@ -24,10 +24,13 @@ const [user, setuser] = useState({
 
 })
 useEffect(() => {
-  if (typeof window !== "undefined") {
+      
     const storedUsers = localStorage.getItem("honeymusic_allusers");
-    setallusers(storedUsers ? JSON.parse(storedUsers) : []);
-  }
+    if(storedUsers){
+
+      setallusers(storedUsers ? JSON.parse(storedUsers) : []);
+    }
+  
 }, []);
 
 const handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{

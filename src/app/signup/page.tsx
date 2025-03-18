@@ -16,17 +16,18 @@ interface User{
 
 const page = () => {
     const [nextcomponent, setnextcomponent] = useState(false)
-    const [user, setuser] = useState<User>({
-email:"",
-password:'',
-id:crypto.randomUUID(),
-fullname:'',
-dob:'',
-gender:""
-    })
-    const nextpage=()=>{
-        setnextcomponent(!nextcomponent)
-    }
+//     const [user, setuser] = useState<User>({
+// email:"",
+// password:'',
+// id:crypto.randomUUID(),
+// fullname:'',
+// dob:'',
+// gender:""
+//     })
+    // const nextpage=()=>{
+    //     setnextcomponent(!nextcomponent)
+    // }
+    
     if(nextcomponent){
         return <Signupone/>
     }

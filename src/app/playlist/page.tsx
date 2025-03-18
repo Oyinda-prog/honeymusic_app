@@ -24,7 +24,7 @@ interface apiinterface{
       gender:string
     }
 const page = () => {
-  let router=useRouter()
+  const router=useRouter()
   const [currentuser, setcurrentuser] = useState<User|null>(null )
   const a={
     textDecoration:'none',
@@ -74,9 +74,9 @@ const page = () => {
           router.push('/')
 
         }
-    const useparams=useParams()
-    const {id}=useparams
-    let artiste=api.find((artist)=>artist.id==id)
+    // const useparams=useParams()
+    // const {id}=useparams
+    // const artiste=api.find((artist)=>artist.id==id)
   return (
     <>
     <nav className='lg:p-[10px] lg:w-[100%] z-2 shadow fixed top-0 bg-[#000000] text-white text-[16px] font-bold'>

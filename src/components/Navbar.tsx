@@ -5,11 +5,11 @@ import React from 'react'
 
 
 const Navbar = () => {
-let a={
+const a={
   textDecoration:'none',
   color:'white'
 }
-let col={
+const col={
   color:'black',
   textDecoration:'none'
 }
