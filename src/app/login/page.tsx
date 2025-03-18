@@ -43,7 +43,7 @@ setuser((prevData)=>({
    const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault()
     console.log('form submitted',user);
-    const currentuser=allusers.find((current:User)=>current.email ===user.email)
+    const currentuser=allusers.find((current:User)=>current.email ===user.email && current.password===user.password)
     console.log(currentuser);
     if(!currentuser){
       // msg.classList()
