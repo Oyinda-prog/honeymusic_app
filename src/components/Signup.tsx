@@ -43,7 +43,7 @@ setuser((prevData)=>({
     e.preventDefault()
     console.log('form submitted',user);
     localStorage.setItem('honeymusic_users',JSON.stringify(user))
-    nextpage()
+    nextpage() 
    }
   return (
     <>
