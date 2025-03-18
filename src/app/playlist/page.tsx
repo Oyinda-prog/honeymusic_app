@@ -2,7 +2,7 @@
 import Sidecomponent from '@/components/Sidecomponent'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useParams, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
 interface apiinterface{
@@ -23,7 +23,7 @@ interface apiinterface{
       dob:string,
       gender:string
     }
-const page = () => {
+const Page = () => {
   const router=useRouter()
   const [currentuser, setcurrentuser] = useState<User|null>(null )
   const a={
@@ -173,4 +173,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

@@ -21,7 +21,7 @@ interface User{
   dob:string,
   gender:string
 }
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const [currentuser, setcurrentuser] = useState<User>({
     email:'',
@@ -68,7 +68,7 @@ const page = () => {
 
   const useparams = useParams();
   const { id } = useparams;
-  let artiste = api.find((artist) => String(artist.id) === id);
+  const artiste = api.find((artist) => String(artist.id) === id);
   const audioref = useRef<HTMLAudioElement | null>(null);
   const play = () => {
     if (audioref.current) {
@@ -232,4 +232,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

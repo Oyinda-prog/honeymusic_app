@@ -2,11 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-// import Signuptwo from "./Signuptwo";
-// import Signone from "./Signone";
-// import Signup from "./Signup";
-// import Sidecomponent from "./Sidecomponent";
-import Signtwo from "./Signtwo";
 import Signuptwo from "./Signuptwo";
 
 interface User{
@@ -31,10 +26,7 @@ const Signthree = () => {
           gender:""
               }  
       )
-      const [allusers, setallusers] = useState(()=>{
-return JSON.parse(localStorage.getItem('honeymusic_allusers')!)|| null
-      }
-      )
+      
 
   
 
@@ -47,16 +39,12 @@ return JSON.parse(localStorage.getItem('honeymusic_allusers')!)|| null
      }, [])
      
      
-    //  useEffect(() => {
-    //    console.log(Signupone);
-       
-    //  }, [Signupone])
 
 
     const submit=()=>{
-  let users:User[]= JSON.parse(localStorage.getItem('honeymusic_allusers')!)||[]
+  const users:User[]= JSON.parse(localStorage.getItem('honeymusic_allusers')!)||[]
       const updateduser=[...users,Signupone]
-      setallusers(updateduser)
+     
       
       localStorage.setItem('honeymusic_allusers',JSON.stringify(updateduser))
 
@@ -108,16 +96,16 @@ return JSON.parse(localStorage.getItem('honeymusic_allusers')!)|| null
               <div className="bg-[#2A2A2A] p-7 rounded-3xl">
                 <input type="checkbox" />
                 <span className="text-white lg:ml-2 font-bold">
-                  Share my registration data with Honey-Music's providers for
+                  Share my registration data with Honey-Music&apos;s providers for
                   marketing purposes
                 </span>
               </div>
             </div>
             <div className="mb-4">
-              <p className="text-white">By clicking on sign-up, you agree to Honey-Music's <Link href="" className="text-green-700">Terms and Conditions of Use</Link></p>
+              <p className="text-white">By clicking on sign-up, you agree to Honey-Music&apos;s <Link href="" className="text-green-700">Terms and Conditions of Use</Link></p>
             </div>
             <div>
-            <p className="text-white">By clicking on sign-up, you agree to on the <Link href="" className="text-green-700">Honey-Music's Privacy Policy</Link></p>
+            <p className="text-white">By clicking on sign-up, you agree to on the <Link href="" className="text-green-700">Honey-Music&apos;s Privacy Policy</Link></p>
             </div>
           </div>
           <Link href='/login'>

@@ -13,7 +13,7 @@ interface User{
   dob:string,
   gender:string
 }
-const page = () => {
+const Page = () => {
   const [msg, setmsg] = useState('')
   const router=useRouter()
   const [allusers, setallusers] = useState<User[] >([])
@@ -130,4 +130,4 @@ setuser((prevData)=>({
 };
 <button type="submit" className="hover: p-3 font-bold rounded-3xl bg-green-500 bg w-[100%] mt-5" >Next</button>
 
-export default page;
+export default Page;

@@ -1,21 +1,21 @@
 'use client'
 
 import Signup from "@/components/Signup";
-import Signupone from "@/components/Signupone";
-import React, { useState } from "react";
+// import Signupone from "@/components/Signupone";
+// import React, { useState } from "react";
 
 // import login from '/about.tsx'
-interface User{
-  email:string,
-  password:string,
-  id:string,
-  fullname:string,
-  dob:string,
-  gender:string
-}
+// interface User{
+//   email:string,
+//   password:string,
+//   id:string,
+//   fullname:string,
+//   dob:string,
+//   gender:string
+// }
 
-const page = () => {
-    const [nextcomponent, setnextcomponent] = useState(false)
+const Page = () => {
+    // const [nextcomponent, setnextcomponent] = useState(false)
 //     const [user, setuser] = useState<User>({
 // email:"",
 // password:'',
@@ -28,9 +28,9 @@ const page = () => {
     //     setnextcomponent(!nextcomponent)
     // }
     
-    if(nextcomponent){
-        return <Signupone/>
-    }
+    // if(nextcomponent){
+    //     return <Signupone/>
+    // }
    
 //  const handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
 // const {name,value}=e.target
@@ -125,4 +125,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

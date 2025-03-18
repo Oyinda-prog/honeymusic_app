@@ -2,9 +2,6 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Signuptwo from "./Signuptwo";
-
-import { useRouter } from "next/navigation";
-
 import Signup from "./Signup";
 
 // import login from '/about.tsx'

@@ -55,14 +55,14 @@ const Sidecomponent = () => {
 <div>
 <div className=' lg:w-[100%] sm:w-[100%] lg:text-[15px] p-6 sm:text-[5px] shadow space-y-6 rounded-3xl bg-[#2A2A2A]'>
 <h1>Create your first playlist</h1>
-<p>It&apos;s easy, we'll help you</p>
+<p>It&apos;s easy, we&apos;ll help you</p>
 <Link href="#" style={{textDecoration:'none'}} className='bg-white text-[15px] text-black p-3 rounded-3xl'>Create Playlist</Link>
 </div>
 </div>
 <div className=''>
 <div className='lg:w-[100%] sm:w-[100%] lg:text-[15px] p-6 sm:text-[5px] shadow space-y-6 rounded-3xl bg-[#2A2A2A]'>
-<h1 >Let's find some podcast to follow</h1>
-<p>We'll keep you updated on new episodes</p>
+<h1 >Let&apos;s find some podcast to follow</h1>
+<p>We&apos;ll keep you updated on new episodes</p>
 <Link href="#" style={{textDecoration:'none'}} className='bg-white text-[15px] text-black p-3 rounded-3xl'>Create Playlist</Link>
 </div>
 

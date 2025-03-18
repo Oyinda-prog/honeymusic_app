@@ -2,12 +2,10 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Signupthree from "./Signupthree";
-import { Sign } from "crypto";
 import Link from "next/link";
-import Signupone from "./Signupone";
-import Signup from "./Signup";
+
 import Signone from "./Signone";
-import Signthree from "./Signthree";
+
 interface User {
   email: string;
   password: string;
@@ -20,7 +18,7 @@ interface User {
 const Signuptwo = () => {
   const [componentthree, setcomponentthree] = useState(false);
   const [previouscon, setpreviouscon] = useState(false)
-  const [secondcomponent, setsecondcomponent] = useState(false);
+  // const [secondcomponent, setsecondcomponent] = useState(false);
 
   const [Signupone, setsignupone] = useState<User>({
     email: "",
