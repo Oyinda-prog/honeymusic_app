@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Signuptwo from "./Signuptwo";
 import Signup from "./Signup";
 
-// import login from '/about.tsx'
 interface user {
   email: string;
   password: string;
@@ -34,9 +33,9 @@ const Signupone = () => {
     // console.log(Signupone);
   }, []);
 
-  useEffect(() => {
-    console.log(Signupone);
-  }, [Signupone]);
+  // useEffect(() => {
+  //   console.log(Signupone);
+  // }, [Signupone]);
 
   const changenext = () => {
     setsecondcomponent(!secondcomponent);

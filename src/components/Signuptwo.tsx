@@ -43,9 +43,9 @@ const Signuptwo = () => {
     // console.log(Signupone);
   }, []);
 
-  useEffect(() => {
-    console.log(Signupone);
-  }, [Signupone]);
+  // useEffect(() => {
+  //   console.log(Signupone);
+  // }, [Signupone]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -57,7 +57,7 @@ const Signuptwo = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     localStorage.setItem("honeymusic_users", JSON.stringify(Signupone));
-    // Signupone.password=Signupone.password
+
     setcomponentthree(true);
     //  pagethree()
   };
@@ -176,7 +176,6 @@ setpreviouscon(!previouscon)
                 <span className="text-white ml-2">rather not say</span>
               </p>
               <div>
-                {/* <button type='submit' className="hover:bg-blue-500" >Next</button> */}
                 <button
                   type="submit"
                   className="hover: p-3 font-bold rounded-3xl bg-green-500 bg w-[100%] mt-5"

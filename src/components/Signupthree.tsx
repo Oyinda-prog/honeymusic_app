@@ -44,8 +44,7 @@ const Signupthree = () => {
      
     const submit=()=>{
   const users:User[]= JSON.parse(localStorage.getItem('honeymusic_allusers')!)||[]
-      const updateduser=[...users,Signupone]
-      // setallusers(updateduser) 
+      const updateduser=[...users,Signupone] 
       localStorage.setItem('honeymusic_allusers',JSON.stringify(updateduser))
     } 
     const prev=()=>{
